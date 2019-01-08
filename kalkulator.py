@@ -12,11 +12,14 @@ class textColor:
 
 window = Tkinter.Tk()
 
-greeting = Tkinter.Label(window, text="K A L K U L A T O R\n")
-greeting.pack()
+window.title("K A L K U L A T O R")
+
+prazna_vrstica = Tkinter.Label(window, text="")
+prazna_vrstica.pack()
 
 tekst_prvo = Tkinter.Label(window, text="Vnesite prvo število")
 tekst_prvo.pack()
+
 prvo_tk = Tkinter.Entry(window)
 prvo_tk.pack()
 
