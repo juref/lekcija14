@@ -65,7 +65,7 @@ def kalkulator():
     result_text = ""
     while True:
         stevilo = prvo_tk.get()
-        if stevilo.isalpha() or len(stevilo) == 0 or " " in stevilo or "+" in stevilo or "-" in stevilo or "*" in stevilo or "/" in stevilo:
+        if not stevilo.isdigit() or len(stevilo) == 0:
             prvo_napaka = "Napaka v prvem polju! To ni število!"
             tkMessageBox.showinfo("Napaka", prvo_napaka)
             break
@@ -85,7 +85,7 @@ def kalkulator():
 
     while True:
         stevilo = drugo_tk.get()
-        if stevilo.isalpha() or len(stevilo) == 0 or " " in stevilo or "+" in stevilo or "-" in stevilo or "*" in stevilo or "/" in stevilo:
+        if not stevilo.isdigit() or len(stevilo) == 0:
             drugo_napaka = "Napaka v drugem polju! To ni število!"
             tkMessageBox.showinfo("Napaka", drugo_napaka)
             break
