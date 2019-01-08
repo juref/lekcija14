@@ -55,6 +55,10 @@ def operacija(x, znak, y):
 ### END funkcija račun ###
 
 
+def removeValue(event):
+    event.delete(0, 'end')
+
+
 def kalkulator():
 
     todo_list = []
@@ -93,8 +97,10 @@ def kalkulator():
     if len(todo_list) == 3:
         history_list = operacija(todo_list[0], todo_list[1], todo_list[2])
         history.append(history_list)
-        tkMessageBox.showinfo("Result", history_list)
-
+        tkMessageBox.showinfo("Rezultat", history_list)
+        removeValue(prvo_tk)
+        removeValue(drugo_tk)
+        removeValue(znak_tk)
 
 def zgodovina():
     if len(history) == 0:
