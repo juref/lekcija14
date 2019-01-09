@@ -49,7 +49,6 @@ def fizzbuzz():
 def removeValue(event):
     event.delete(0, 'end')
 
-
 submit = Tkinter.Button(window, text="Do the FizzBuzz", command=fizzbuzz)
 submit.pack()
 
